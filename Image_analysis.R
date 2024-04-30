@@ -3,9 +3,9 @@ library(dplyr)
 library(ggplot2)
 library(pixmap)
 
-image_names <- list.files(path = "/Users/johannaschoellhorn/Desktop/Master/Analysing U.D/Assignments/Assignment 3/faces/", pattern = NULL, all.files = FALSE, full.names = FALSE)
+image_names <- list.files(path = "/Users/johannaschoellhorn", pattern = NULL, all.files = FALSE, full.names = FALSE)
 
-image_names_complete <- paste(path = "/Users/johannaschoellhorn/Desktop/Master/Analysing U.D/Assignments/Assignment 3/faces/", image_names[1:1000], sep = "")
+image_names_complete <- paste(path = "/Users/johannaschoellhorn", image_names[1:1000], sep = "")
 
 #Store the matrices in a list called images and plotting an image
 images <- lapply(image_names_complete, function(path) read.pnm(path))
